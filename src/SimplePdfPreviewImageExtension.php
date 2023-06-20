@@ -35,7 +35,7 @@ class SimplePdfPreviewImageExtension extends DataExtension
 
     public function getPdfPreviewImage()
     {
-        $url = $this->owner->getUrl();
+        $url = (string) $this->owner->getUrl();
         $url = ltrim($url, '/');
         $pdfFile = Director::getAbsFile($url);
         $pathInfo = pathinfo($pdfFile);
